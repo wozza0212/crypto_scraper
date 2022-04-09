@@ -18,7 +18,7 @@ class CryptoPricesSpider(CrawlSpider):
         # This row, is the xpath to a row of the table that we want to access
 
         yield {
-            'Date': response.xpath("./h1/text()").get(),
+            'Date': response.xpath("//h1/text()").get(),
             'Name': row.xpath("./td/div/a[@class='cmc-table__column-name--name cmc-link']/text()").get(),
             'Symbol': row.xpath("./td/div/a[@class='cmc-table__column-name--symbol cmc-link']/text()").get(),
             'Price': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--rightcmc-table__cell--sort-by__price']/div//text()").get(),
