@@ -24,6 +24,6 @@ class CryptoPricesSpider(CrawlSpider):
                 'Price': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__price']/div//text()").get(),
                 'Market Cap': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__market-cap']//text()").get(),
                 'Circulating Supply': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__circulating-supply']//text()").get(),
-    
+
 
             }
