@@ -21,9 +21,9 @@ class CryptoPricesSpider(CrawlSpider):
                 'Date': response.xpath("//h1/text()").get(),
                 'Name': row.xpath("./td/div/a[@class='cmc-table__column-name--name cmc-link']/text()").get(),
                 'Symbol': row.xpath("./td/div/a[@class='cmc-table__column-name--symbol cmc-link']/text()").get(),
-                'Price': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--rightcmc-table__cell--sort-by__price']/div//text()").get(),
+                'Price': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__price']/div//text()").get(),
                 'Market Cap': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__market-cap']//text()").get(),
                 'Circulating Supply': row.xpath("./td[@class='cmc-table__cell cmc-table__cell--sortable cmc-table__cell--right cmc-table__cell--sort-by__circulating-supply']//text()").get(),
-                'url': response.url,
+    
 
             }
